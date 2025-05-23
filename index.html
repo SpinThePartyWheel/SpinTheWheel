@@ -15,15 +15,45 @@
             font-size: 2.5em;
             margin-bottom: 20px;
         }
+        .button {
+            background-color: #e1306c;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 40px;
+            transition: background 0.3s;
+        }
+        .button:hover {
+            background-color: #c72b5e;
+        }
         iframe {
             border: none;
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+            display: none;
+            margin-top: 30px;
         }
     </style>
 </head>
 <body>
     <h1>🎡 Spin The Wheel Darlingg 🎯</h1>
-    <iframe src="https://wheelofnames.com/zch-k7t" width="500" height="500"></iframe>
+    <p>Add me on insta to unlock the game 😏</p>
+    <button class="button" onclick="unlockWheel()">Add on insta 💖</button>
+
+    <iframe id="wheel" src="https://wheelofnames.com/zch-k7t" width="500" height="500"></iframe>
+
+    <script>
+        function unlockWheel() {
+            window.open("https://instagram.com/mateo.mmmmmm", "_blank");
+
+            // Attente avant d'afficher la roue (simulation du “check”)
+            setTimeout(function () {
+                document.getElementById("wheel").style.display = "block";
+            }, 10000); // 5 secondes
+        }
+    </script>
 </body>
 </html>
